@@ -30,6 +30,8 @@ class MainActivity : ComponentActivity() {
                         HomeScreen()
                         Spacer(modifier = Modifier.height(10.dp))
                         CardSection()
+                        Spacer(modifier = Modifier.height(20.dp))
+                        FinanceSection()
                     }
 
                 }
