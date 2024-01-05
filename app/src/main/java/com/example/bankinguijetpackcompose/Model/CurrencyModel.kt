@@ -5,6 +5,6 @@ import androidx.compose.ui.graphics.vector.ImageVector
 data class CurrencyModel (
     val icon:ImageVector,
     val currenytype:String,
-    val buyrate:String,
-    val sellrate:String
+    val buyrate:Float,
+    val sellrate:Float
     )
