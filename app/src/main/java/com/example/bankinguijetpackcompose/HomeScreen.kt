@@ -42,13 +42,13 @@ fun HomeScreen(){
         ){
         Column {
             Text(text = "Wallet",
-                fontSize = 18.sp,
-                fontWeight = FontWeight.Normal,
+                fontSize = 17.sp,
+                fontWeight = FontWeight.SemiBold,
                 color = Color.Black
                 )
 
             Text(text = "$ 34.346" ,
-                fontSize = 30.sp,
+                fontSize = 25.sp,
                 fontWeight = FontWeight.SemiBold
                 )
         }
@@ -128,39 +128,38 @@ fun Card( index : Int, cards: List<Cards>) {
 
     Box(modifier = Modifier
         .clip(RoundedCornerShape(25.dp))
-        .background(Color.Cyan)
-        .height(190.dp)
-        .width(290.dp)
+        .height(170.dp)
+        .width(250.dp)
         .background(carddata.color)
     ){
 
         Column {
             Image(painter =carddata.icon, contentDescription ="Icon" ,Modifier.
-                height(60.dp)
-                .width(100.dp)
+                height(50.dp)
+                .width(90.dp)
                 .aspectRatio(1f)
                 .padding(start = 20.dp, top = 10.dp)
             )
 
             Text(text = carddata.title,
                 modifier = Modifier
-                    .padding(start=20.dp, top=20.dp),
+                    .padding(start=20.dp, top=13.dp),
                 fontWeight = FontWeight.Bold,
-                fontSize = 20.sp
+                fontSize = 19.sp
                 )
 
             Text(text = carddata.money,
                 modifier = Modifier
                     .padding(start=20.dp, top=5.dp),
                 fontWeight = FontWeight.Bold,
-                fontSize = 25.sp
+                fontSize = 23.sp
             )
 
             Text(text = carddata.idnumber,
                 modifier = Modifier
                     .padding(start=20.dp, top=5.dp),
                 fontWeight = FontWeight.Bold,
-                fontSize = 20.sp
+                fontSize = 19.sp
             )
         }
     }

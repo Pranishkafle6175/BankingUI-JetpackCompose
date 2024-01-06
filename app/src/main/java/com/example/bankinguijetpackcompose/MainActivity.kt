@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -23,21 +24,32 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Column (modifier = Modifier
-                        .fillMaxSize()
-                        .padding(horizontal = 10.dp)
-                            ){
-                        HomeScreen()
-                        Spacer(modifier = Modifier.height(10.dp))
-                        CardSection()
-                        Spacer(modifier = Modifier.height(20.dp))
-                        FinanceSection()
-                        Spacer(modifier = Modifier.height(20.dp))
-                        CurrencySection()
+                    Scaffold(
+                        bottomBar = { BottomNavigationBar() }
+                    ) {
+                        MainScreen()
                     }
+
+
 
                 }
             }
         }
+    }
+}
+
+@Composable
+fun MainScreen(){
+    Column (modifier = Modifier
+        .fillMaxSize()
+        .padding(horizontal = 10.dp)
+    ){
+        HomeScreen()
+        Spacer(modifier = Modifier.height(10.dp))
+        CardSection()
+        Spacer(modifier = Modifier.height(20.dp))
+        FinanceSection()
+        Spacer(modifier = Modifier.height(20.dp))
+        CurrencySection()
     }
 }
