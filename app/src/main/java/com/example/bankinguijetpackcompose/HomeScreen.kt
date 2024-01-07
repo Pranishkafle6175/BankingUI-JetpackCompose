@@ -136,7 +136,7 @@ fun Card( index : Int, cards: List<Cards>) {
         Column {
             Image(painter =carddata.icon, contentDescription ="Icon" ,Modifier.
                 height(50.dp)
-                .width(90.dp)
+                .width(91.dp)
                 .aspectRatio(1f)
                 .padding(start = 20.dp, top = 10.dp)
             )
