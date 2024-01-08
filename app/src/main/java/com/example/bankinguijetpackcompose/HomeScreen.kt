@@ -143,7 +143,7 @@ fun Card( index : Int, cards: List<Cards>) {
 
             Text(text = carddata.title,
                 modifier = Modifier
-                    .padding(start=20.dp, top=13.dp),
+                    .padding(start=20.dp, top=12.dp),
                 fontWeight = FontWeight.Bold,
                 fontSize = 19.sp
                 )
